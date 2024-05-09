@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Pages/MyHomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue), // deepPurple
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -36,6 +38,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// NOTA: Lo siguiente fue movido a Pages/MyHomePage.dart
+
+/*
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -56,6 +61,26 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+
+  @override
+  void initState(){
+
+  }
+
+  @override
+  void didUpdateWidget(MyHomePage oldWidget){
+
+  }
+
+  @override
+  void deactivate(){
+
+  }
+
+  @override
+  void dispose(){
+
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -123,3 +148,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+*/
