@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../Widgets/MyText.dart';
+
 // Los comentarios originales de esto fueron dejados
 // en el archivo main.dart
 class MyHomePage extends StatefulWidget {
@@ -24,9 +26,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.pinkAccent,
       body: SafeArea(
-        child: Text(
-        'You have pushed the button this many times:',
-      ),)
+        child: MyText(),
+      )
     );
   }
 }
