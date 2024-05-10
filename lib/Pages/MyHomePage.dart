@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Widgets/MyIcon.dart';
+import 'package:my_first_app/Widgets/MyImage.dart';
 import 'package:my_first_app/Widgets/MyRichText.dart';
 
 import '../Widgets/MyText.dart';
@@ -28,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Colors.pinkAccent,
       body: SafeArea(
-        child: MyIcon(),
+        child: MyImage(),
       )
     );
   }
