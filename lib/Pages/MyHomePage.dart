@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Widgets/MyAppBar.dart';
 import 'package:my_first_app/Widgets/MyButtons.dart';
 import 'package:my_first_app/Widgets/MyFloatingActionButton.dart';
 import 'package:my_first_app/Widgets/MyIcon.dart';
@@ -32,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.pinkAccent,
       floatingActionButton: MyFloatingActionButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      appBar: MyAppBar(),
       body: SafeArea(
         child: MyButtons(),
       )
