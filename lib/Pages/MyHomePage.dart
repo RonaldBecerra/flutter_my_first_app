@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Widgets/MyButtons.dart';
+import 'package:my_first_app/Widgets/MyFloatingActionButton.dart';
 import 'package:my_first_app/Widgets/MyIcon.dart';
 import 'package:my_first_app/Widgets/MyImage.dart';
 import 'package:my_first_app/Widgets/MyRichText.dart';
@@ -29,6 +30,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.pinkAccent,
+      floatingActionButton: MyFloatingActionButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       body: SafeArea(
         child: MyButtons(),
       )
