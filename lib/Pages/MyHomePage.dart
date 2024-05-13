@@ -14,8 +14,7 @@ import '../Widgets/Basicos/MyText.dart';
 // Los comentarios originales de esto fueron dejados
 // en el archivo main.dart
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+  MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();

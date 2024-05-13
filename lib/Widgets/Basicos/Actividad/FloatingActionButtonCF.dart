@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Pages/PlayListPage.dart';
 
 class FloatingActionButtonCF extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return FloatingActionButton(
-      onPressed: (){},
-      child: Icon(Icons.add, size:40, color: Colors.white),
-      backgroundColor: Color(0xfffcab40),
+      onPressed: () => {
+        /*
+        Navigator.push(context, MaterialPageRoute(
+            builder: (context) => PlayListPage(),
+        ))*/
+        Navigator.pop(context)
+      },
+      child: Icon(
+          Icons.add,
+          size:30,
+          color: Colors.white,
+      ),
+      backgroundColor: Colors.orangeAccent,
       elevation: 20,
-      tooltip: "Agregar Usuario",
       shape: CircleBorder(),
     );
   }
