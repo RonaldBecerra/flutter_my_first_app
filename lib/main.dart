@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyRouters.dart';
 import 'Pages/LoginPage.dart';
 import 'Pages/MyHomePage.dart';
 
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
+      onGenerateRoute: MyRouters.generateRoute,
+      initialRoute: ROUTE_LOGIN,
       theme: ThemeData(
         // This is the theme of your application.
         //

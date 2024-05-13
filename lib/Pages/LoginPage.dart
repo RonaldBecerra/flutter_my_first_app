@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyRouters.dart';
 
 import 'MyHomePage.dart';
 
@@ -17,10 +18,11 @@ class LoginPageState extends State<LoginPage>{
         child: ElevatedButton(
           child: Text("MyHomePage"),
           onPressed: () => {
+            Navigator.pushNamed(context, ROUTE_HOME),
             /*Navigator.push(context, CupertinoPageRoute(
                 builder: (context)=> MyHomePage(),
             ))*/
-            Navigator.pop(context),
+            //Navigator.pop(context),
           },
         ),
       ),
