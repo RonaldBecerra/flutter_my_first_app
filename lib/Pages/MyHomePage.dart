@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/HomeArguments.dart';
 import 'package:my_first_app/Widgets/Basicos/Actividad/AppBarCF.dart';
 import 'package:my_first_app/Widgets/Basicos/Actividad/FloatingActionButtonCF.dart';
 import 'package:my_first_app/Widgets/Basicos/Actividad/ImageCF.dart';
@@ -47,13 +48,17 @@ class _MyHomePageState extends State<MyHomePage> {
   // Para la actividad extra del módulo 2
   @override
   Widget build(BuildContext context) {
+    HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
+    //var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButtonCF(),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-      appBar: AppBarCF(),
+      appBar: AppBarCF(homeArguments.title),
+      //appBar: AppBarCF(args),
       body: SafeArea(
-        child: Center(child: ImageCF()),
+        child: Center(child: Text(homeArguments.message)),
+        //child: Center(child: ImageCF()),
       )
     );
   }
