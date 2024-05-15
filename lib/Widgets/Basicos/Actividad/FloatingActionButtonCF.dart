@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Pages/PlayListPage.dart';
 
 class FloatingActionButtonCF extends StatelessWidget{
@@ -7,11 +8,17 @@ class FloatingActionButtonCF extends StatelessWidget{
     // TODO: implement build
     return FloatingActionButton(
       onPressed: () => {
+        Navigator.pushNamedAndRemoveUntil(
+            context,
+            ROUTE_PLAY_LIST,
+            (Route<dynamic>route) => false // El 
+        ),
+        //Navigator.popAndPushNamed(context, ROUTE_PLAY_LIST),
         /*
         Navigator.push(context, MaterialPageRoute(
             builder: (context) => PlayListPage(),
         ))*/
-        Navigator.pop(context)
+        //Navigator.pop(context)
       },
       child: Icon(
           Icons.add,
