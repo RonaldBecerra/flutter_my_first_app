@@ -11,7 +11,7 @@ class FloatingActionButtonCF extends StatelessWidget{
         Navigator.pushNamedAndRemoveUntil(
             context,
             ROUTE_PLAY_LIST,
-            (Route<dynamic>route) => false // El 
+            (Route<dynamic>route) => false
         ),
         //Navigator.popAndPushNamed(context, ROUTE_PLAY_LIST),
         /*

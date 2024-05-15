@@ -5,6 +5,7 @@ class ImageCF extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     // Cody with white background
+    //return Image(image: AssetImage("assets/images/Cody.jpeg" ),
     return Image(image: NetworkImage("https://i.imgur.com/t8qXd3Q.png"),
       width: 320,
       height: 320,
