@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
 import 'package:my_first_app/Widgets/MultiChild/MyColumn.dart';
 
+import '../Widgets/MultiChild/MyRow.dart';
+
 class NowPlayingPage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => NowPlayingPageState();
@@ -13,9 +15,13 @@ class NowPlayingPageState extends State<NowPlayingPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateColumn(),
+        child: privateRow(),
       ),
     );
+  }
+
+  privateRow(){
+    return MyRow();
   }
 
   privateColumn(){
