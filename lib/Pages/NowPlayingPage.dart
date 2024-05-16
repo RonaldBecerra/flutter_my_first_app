@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
+import 'package:my_first_app/Widgets/MultiChild/MyColumn.dart';
 
 class NowPlayingPage extends StatefulWidget{
   @override
@@ -12,17 +13,24 @@ class NowPlayingPageState extends State<NowPlayingPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: ElevatedButton(
-          child: Text("MyHomePage"),
-          onPressed: () => {
-            /*Navigator.push(context, MaterialPageRoute(
-              builder: (context) => MyHomePage(),
-            ))*/
-            Navigator.pop(context),
-          },
-        ),
+        child: privateColumn(),
       ),
     );
   }
 
+  privateColumn(){
+    return MyColumn();
+  }
+
+  privateElevatedButton(){
+    return ElevatedButton(
+      child: Text("MyHomePage"),
+      onPressed: () => {
+        /*Navigator.push(context, MaterialPageRoute(
+              builder: (context) => MyHomePage(),
+            ))*/
+        Navigator.pop(context),
+      },
+    );
+  }
 }

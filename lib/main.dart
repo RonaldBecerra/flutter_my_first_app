@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: ROUTE_LOGIN,
+      initialRoute: ROUTE_NOW_PLAYING,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'), // Original
-      home: LoginPage(),
+      //home: LoginPage(),
     );
   }
 }
