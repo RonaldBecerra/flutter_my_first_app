@@ -30,7 +30,6 @@ class MyRouters{
         return MaterialPageRoute(builder: (_)=>NowPlayingPage());
       default:
         return MaterialPageRoute(builder: (_)=>LoginPage());
-
     }
   }
 }

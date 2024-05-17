@@ -80,6 +80,9 @@ flutter:
      - family: Montserrat
        fonts:
          - asset: assets/fonts/Montserrat-Regular.ttf
+     - family: Teko
+       fonts:
+         - asset: assets/fonts/Teko-Light.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

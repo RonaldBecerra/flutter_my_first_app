@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/MyHomePage.dart';
+import 'package:my_first_app/Widgets/MultiChild/Actividad/PlayingNow.dart';
 import 'package:my_first_app/Widgets/MultiChild/MyColumn.dart';
 import 'package:my_first_app/Widgets/MultiChild/MyStack.dart';
 
@@ -17,9 +18,13 @@ class NowPlayingPageState extends State<NowPlayingPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateStack(),
+        child: privatePlayingNow(),
       ),
     );
+  }
+
+  privatePlayingNow(){
+    return PlayingNow();
   }
 
   privateStack(){
