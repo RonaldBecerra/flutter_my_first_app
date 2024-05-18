@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
-import 'package:my_first_app/Widgets/ListViewAndGridView/MyContainer.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyCard.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart';
 
 class PlayListPage extends StatefulWidget{
   @override
@@ -13,9 +14,13 @@ class PlayListPageState extends State<PlayListPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateContainer(),
+        child: privateCard(),
       ),
     );
+  }
+
+  privateCard(){
+    return MyCard();
   }
 
   privateContainer(){
