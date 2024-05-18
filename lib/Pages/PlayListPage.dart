@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/MyContainer.dart';
 
 class PlayListPage extends StatefulWidget{
   @override
@@ -12,17 +13,25 @@ class PlayListPageState extends State<PlayListPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: ElevatedButton(
-          child: Text("NowPlayingPage"),
-          onPressed: () => {
-            /*
+        child: privateContainer(),
+      ),
+    );
+  }
+
+  privateContainer(){
+    return MyContainer();
+  }
+
+  privateElevatedButton(){
+    return ElevatedButton(
+      child: Text("NowPlayingPage"),
+      onPressed: () => {
+        /*
             Navigator.push(context, MaterialPageRoute(
               builder: (context) => NowPlayingPage(),
             ))*/
-            Navigator.pop(context),
-          },
-        ),
-      ),
+        Navigator.pop(context),
+      },
     );
   }
 

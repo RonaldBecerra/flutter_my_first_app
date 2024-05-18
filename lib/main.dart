@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
       onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: ROUTE_NOW_PLAYING,
+      initialRoute: ROUTE_PLAY_LIST,
       theme: ThemeData(
         // This is the theme of your application.
         //
