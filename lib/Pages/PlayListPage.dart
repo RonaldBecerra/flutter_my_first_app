@@ -15,7 +15,7 @@ class PlayListPageState extends State<PlayListPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateListTile(),
+        child: privateCard(),
       ),
     );
   }
