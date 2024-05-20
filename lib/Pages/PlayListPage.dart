@@ -4,6 +4,7 @@ import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyCard.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyListTile.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/MyGridView.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/MyListView.dart';
 
 class PlayListPage extends StatefulWidget{
   @override
@@ -16,13 +17,14 @@ class PlayListPageState extends State<PlayListPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateGridView(),
+        child: privateListView(),
       ),
     );
   }
 
+  privateListView() => MyListView();
   privateGridView() => MyGridView();
-  privateListTile() => MyListTile();
+  //privateListTile() => MyListTile();
   privateCard() => MyCard();
   privateContainer() => MyContainer();
 
