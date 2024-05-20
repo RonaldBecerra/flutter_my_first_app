@@ -3,6 +3,7 @@ import 'package:my_first_app/Pages/NowPlayingPage.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyCard.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyListTile.dart';
+import 'package:my_first_app/Widgets/ListViewAndGridView/MyGridView.dart';
 
 class PlayListPage extends StatefulWidget{
   @override
@@ -15,22 +16,15 @@ class PlayListPageState extends State<PlayListPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateCard(),
+        child: privateGridView(),
       ),
     );
   }
 
-  privateListTile(){
-    return MyListTile();
-  }
-
-  privateCard(){
-    return MyCard();
-  }
-
-  privateContainer(){
-    return MyContainer();
-  }
+  privateGridView() => MyGridView();
+  privateListTile() => MyListTile();
+  privateCard() => MyCard();
+  privateContainer() => MyContainer();
 
   privateElevatedButton(){
     return ElevatedButton(

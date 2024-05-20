@@ -23,25 +23,11 @@ class NowPlayingPageState extends State<NowPlayingPage>{
     );
   }
 
-  privatePlayingNow(){
-    return PlayingNow();
-  }
-
-  privateStack(){
-    return MyStack();
-  }
-
-  privateWrap(){
-    return MyWrap();
-  }
-
-  privateRow(){
-    return MyRow();
-  }
-
-  privateColumn(){
-    return MyColumn();
-  }
+  privatePlayingNow() => PlayingNow();
+  privateStack() => MyStack();
+  privateWrap() => MyWrap();
+  privateRow() => MyRow();
+  privateColumn() => MyColumn();
 
   privateElevatedButton(){
     return ElevatedButton(
