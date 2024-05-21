@@ -6,8 +6,9 @@ typedef VoidCallbackParam(Sound sound);
 
 class MyListTile extends StatelessWidget{
   Sound sound;
+  int index;
   VoidCallbackParam voidCallbackParam;
-  MyListTile(this.sound, this.voidCallbackParam);
+  MyListTile(this.sound, this.index, this.voidCallbackParam);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class MyListTile extends StatelessWidget{
         //child: Icon(Icons.more_vert),
       ),
       leading: Icon(Icons.chrome_reader_mode),
-      onTap: (){print("ListTile");},
+      onTap: ()=>myListViewKey.currentState?.update(sound..title="Hola mundo", index),
       onLongPress: (){print("ListTile onLongPress");},
     );
   }

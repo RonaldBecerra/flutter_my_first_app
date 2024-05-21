@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyKeys.dart';
+import 'package:my_first_app/Model/Sound.dart';
 import 'package:my_first_app/Pages/NowPlayingPage.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyCard.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart';
@@ -16,6 +18,12 @@ class PlayListPageState extends State<PlayListPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: ()=>myListViewKey.currentState?.add(Sound(
+            title:"Turuturuturtu", author: "CodigoFacilito")
+        ),
+        child: Icon(Icons.add),
+      ),
       body: SafeArea(
         child: privateListView(),
       ),

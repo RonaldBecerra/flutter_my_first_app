@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Common/MyKeys.dart';
 import 'package:my_first_app/Model/Sound.dart';
-import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyCard.dart';
-import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyListTile.dart';
 
 class MyListView extends StatefulWidget {
@@ -35,7 +33,7 @@ class MyListViewState extends State<MyListView>{
           return Dismissible(
             direction: DismissDirection.startToEnd,
             key: ObjectKey(sound),
-            child: MyListTile(sound, remove),
+            child: MyListTile(sound, index, remove),
             onDismissed: (direction){
               remove(sound);
             }
@@ -43,6 +41,16 @@ class MyListViewState extends State<MyListView>{
         }, //itemBuilder: (context,index)=>MyContainer(),
       ),
     );
+  }
+
+  update(Sound sound, int index){
+    setState(() {
+      mySounds[index] = sound;
+    });
+  }
+
+  add(Sound sound){
+    setState(()=>mySounds.add(sound));
   }
 
   remove(Sound sound){
