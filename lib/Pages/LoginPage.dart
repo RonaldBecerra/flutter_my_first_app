@@ -6,6 +6,7 @@ import 'package:my_first_app/Widgets/Form/MyCheckBox.dart';
 import 'package:my_first_app/Widgets/Form/MyDatePicker.dart';
 import 'package:my_first_app/Widgets/Form/MyDropdownButton.dart';
 import 'package:my_first_app/Widgets/Form/MyRadio.dart';
+import 'package:my_first_app/Widgets/Form/MySwitch.dart';
 
 import 'MyHomePage.dart';
 
@@ -20,11 +21,12 @@ class LoginPageState extends State<LoginPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateDropdownButton(),
+        child: privateSwitch(),
       ),
     );
   }
 
+  privateSwitch()=>MySwitch();
   privateDropdownButton()=>MyDropdownButton();
   privateDatePicker()=>MyDatePicker();
   privateCheckBox()=>MyCheckBox();
