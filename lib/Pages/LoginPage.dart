@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Common/HomeArguments.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
+import 'package:my_first_app/Widgets/Form/MyRadio.dart';
 
 import 'MyHomePage.dart';
 
@@ -16,18 +17,22 @@ class LoginPageState extends State<LoginPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: ElevatedButton(
-          child: Text("MyHomePage"),
-          onPressed: () => {
-            Navigator.pushNamed(context, ROUTE_HOME, arguments: HomeArguments("Home", "Hola mundo")),
-            //Navigator.pushNamed(context, ROUTE_HOME, arguments: "Home"),
-            /*Navigator.push(context, CupertinoPageRoute(
+        child: MyRadio(),
+      ),
+    );
+  }
+
+  privateElevatedButton(){
+    return ElevatedButton(
+      child: Text("MyHomePage"),
+      onPressed: () => {
+        Navigator.pushNamed(context, ROUTE_HOME, arguments: HomeArguments("Home", "Hola mundo")),
+        //Navigator.pushNamed(context, ROUTE_HOME, arguments: "Home"),
+        /*Navigator.push(context, CupertinoPageRoute(
                 builder: (context)=> MyHomePage(),
             ))*/
-            //Navigator.pop(context),
-          },
-        ),
-      ),
+        //Navigator.pop(context),
+      },
     );
   }
 
