@@ -5,6 +5,7 @@ import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Widgets/Form/MyCheckBox.dart';
 import 'package:my_first_app/Widgets/Form/MyDatePicker.dart';
 import 'package:my_first_app/Widgets/Form/MyDropdownButton.dart';
+import 'package:my_first_app/Widgets/Form/MyForm.dart';
 import 'package:my_first_app/Widgets/Form/MyRadio.dart';
 import 'package:my_first_app/Widgets/Form/MySwitch.dart';
 import 'package:my_first_app/Widgets/Form/MyTextField.dart';
@@ -22,11 +23,12 @@ class LoginPageState extends State<LoginPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateTextField(),
+        child: privateForm(),
       ),
     );
   }
 
+  privateForm()=>MyForm();
   privateTextField()=>MyTextField();
   privateSwitch()=>MySwitch();
   privateDropdownButton()=>MyDropdownButton();
