@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:my_first_app/Common/HomeArguments.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
+import 'package:my_first_app/Widgets/Form/Actividad/LoginForm.dart';
 import 'package:my_first_app/Widgets/Form/MyCheckBox.dart';
 import 'package:my_first_app/Widgets/Form/MyDatePicker.dart';
 import 'package:my_first_app/Widgets/Form/MyDropdownButton.dart';
@@ -23,11 +24,12 @@ class LoginPageState extends State<LoginPage>{
     // TODO: implement build
     return Scaffold(
       body: SafeArea(
-        child: privateForm(),
+        child: privateLoginForm(),
       ),
     );
   }
 
+  privateLoginForm()=>LoginForm(); // Actividad del módulo 6
   privateForm()=>MyForm();
   privateTextField()=>MyTextField();
   privateSwitch()=>MySwitch();
