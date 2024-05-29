@@ -9,6 +9,7 @@ import 'package:my_first_app/Widgets/Basicos/MyFloatingActionButton.dart';
 import 'package:my_first_app/Widgets/Basicos/MyIcon.dart';
 import 'package:my_first_app/Widgets/Basicos/MyImage.dart';
 import 'package:my_first_app/Widgets/Basicos/MyRichText.dart';
+import 'package:my_first_app/Widgets/Menu/MyDrawer.dart';
 
 import '../Widgets/Basicos/MyText.dart';
 
@@ -30,24 +31,31 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  /*
   @override
   Widget build(BuildContext context) {
+    return menusModulo6();
+  }
+
+  // Como quedó con actividad del módulo 2, más modificaciones en el módulo 6
+  menusModulo6(){
+    //HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
+    //var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
-        backgroundColor: Colors.pinkAccent,
-        floatingActionButton: MyFloatingActionButton(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-        appBar: MyAppBar(),
-        body: SafeArea(
-          child: MyButtons(),
-        )
+      drawer: MyDrawer(),
+      backgroundColor: Colors.white,
+      floatingActionButton: FloatingActionButtonCF(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      appBar: AppBarCF("Codigo Facilito"),
+      //appBar: AppBarCF(args),
+      body: SafeArea(
+        child: Center(child: Text("Hola mundo")),
+        //child: Center(child: ImageCF()),
+      ),
     );
   }
-  */
 
   // Para la actividad extra del módulo 2
-  @override
-  Widget build(BuildContext context) {
+  actividadExtraModulo2(){
     HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
     //var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
@@ -59,8 +67,20 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: Center(child: Text(homeArguments.message)),
         //child: Center(child: ImageCF()),
-      )
+      ),
     );
   }
 
+  // PPrimer diseño que tuvimos
+  initialDesign(){
+    return Scaffold(
+        backgroundColor: Colors.pinkAccent,
+        floatingActionButton: MyFloatingActionButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+        appBar: MyAppBar(),
+        body: SafeArea(
+          child: MyButtons(),
+        )
+    );
+  }
 }

@@ -13,11 +13,11 @@ class AppBarCF extends StatelessWidget implements PreferredSizeWidget{
       elevation: 20,
       shadowColor: Colors.white,
       centerTitle: true,
-      leading: Icon(
+      /*leading: Icon(
         Icons.star_border,
         color: Colors.white,
-        size: 29,
-      ),
+        size: 30,
+      ),*/
       actions: [
         Icon(Icons.edit, color: Colors.white),
         Icon(Icons.more_vert, color: Colors.white),
@@ -27,5 +27,5 @@ class AppBarCF extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight * 3);
+  Size get preferredSize => Size.fromHeight(200);
 }
