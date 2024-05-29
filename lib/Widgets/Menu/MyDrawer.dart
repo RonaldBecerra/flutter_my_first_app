@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
+typedef VoidCallbackParam(int index);
+
 class MyDrawer extends StatelessWidget{
+  VoidCallbackParam voidCallbackParam;
+  MyDrawer(this.voidCallbackParam);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -17,14 +22,17 @@ class MyDrawer extends StatelessWidget{
           ListTile(
             leading: Icon(Icons.home),
             title: Text("Inicio"),
+            onTap: ()=>voidCallbackParam(0),
           ),
           ListTile(
             leading: Icon(Icons.playlist_play_outlined),
             title: Text("Mi lista"),
+            onTap: ()=>voidCallbackParam(1),
           ),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text("Configuración"),
+            onTap: ()=>voidCallbackParam(2),
           ),
           Divider(
             height: 6,

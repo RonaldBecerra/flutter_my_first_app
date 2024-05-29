@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
     //HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
     //var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
-      drawer: MyDrawer(),
+      drawer: MyDrawer(onTab),
       bottomNavigationBar: MyBottomNavigatorBar(onTab, currentIndex),
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButtonCF(),
