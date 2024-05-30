@@ -55,6 +55,28 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  bottomSheet(){
+    showModalBottomSheet(
+      context: context,
+      builder: (builder)=>Column(
+        children: [
+          ListTile(
+            leading: Icon(Icons.share),
+            title: Text("Compartir"),
+          ),
+          ListTile(
+            leading: Icon(Icons.link),
+            title: Text("Copiar Link"),
+          ),
+          ListTile(
+            leading: Icon(Icons.send),
+            title: Text("Enviar"),
+          ),
+        ],
+      ),
+    );
+  }
+
   // Como quedó con actividad del módulo 2, más modificaciones en el módulo 6
   menusModulo6(){
     //HomeArguments homeArguments = ModalRoute.of(context)!.settings.arguments as HomeArguments;
@@ -63,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: MyDrawer(onTab),
       bottomNavigationBar: MyBottomNavigatorBar(onTab, currentIndex),
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButtonCF(),
+      floatingActionButton: FloatingActionButtonCF(bottomSheet),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       appBar: AppBarCF("Codigo Facilito"),
       //appBar: AppBarCF(args),
@@ -81,7 +103,9 @@ class _MyHomePageState extends State<MyHomePage> {
     //var args = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButtonCF(),
+      // Agregué este null ya en el fututo porque ahora esa clase requiere de un
+      // argumento.
+      floatingActionButton: FloatingActionButtonCF(null),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       appBar: AppBarCF(homeArguments.title),
       //appBar: AppBarCF(args),
