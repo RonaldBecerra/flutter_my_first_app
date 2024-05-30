@@ -20,7 +20,27 @@ class AppBarCF extends StatelessWidget implements PreferredSizeWidget{
       ),*/
       actions: [
         Icon(Icons.edit, color: Colors.white),
-        Icon(Icons.more_vert, color: Colors.white),
+        PopupMenuButton(
+          color: Colors.red,
+          elevation: 30,
+          shape: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.white,
+              width: 10,
+            ),
+          ),
+          icon: Icon(Icons.more_vert, color: Colors.white),
+          itemBuilder: (context)=>[
+            PopupMenuItem(
+              value: 1,
+              child: Text("Compartir"),
+            ),
+            PopupMenuItem(
+              value: 2,
+              child: Text("Obtener Link"),
+            ),
+          ],
+        ),
       ],
     );
   }
