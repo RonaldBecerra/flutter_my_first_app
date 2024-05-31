@@ -20,7 +20,13 @@ class PlayListPageState extends State<PlayListPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: testOpa,
+      //backgroundColor: testOpa,
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          myAppKey.currentState!.changeTheme(ThemeMode.dark);
+        },
+        child: Icon(Icons.add),
+      ),
       /*floatingActionButton: FloatingActionButton(
         onPressed: ()=>myListViewKey.currentState?.add(Sound(
           title:"Turuturuturtu", author: "CodigoFacilito")

@@ -44,11 +44,19 @@ class TextStyleApp{
     color: textDark,
   );
 
-  
+
   TextStyle get headline3 => textBase.copyWith(
     //fontSize:
   );
   TextStyle get headline3Dark => headline3.copyWith(
+    color: textDark,
+  );
+
+
+  TextStyle get caption => textBase.copyWith(
+    //fontSize:
+  );
+  TextStyle get captionDark => caption.copyWith(
     color: textDark,
   );
 }

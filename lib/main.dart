@@ -1,24 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Common/MyKeys.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
+import 'package:my_first_app/Values/ColorsApp.dart';
+import 'package:my_first_app/Values/ThemeApp.dart';
 import 'Pages/LoginPage.dart';
 import 'Pages/MyHomePage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class MyApp extends StatefulWidget{
   // This widget is the root of your application.
+  MyApp():super(key:myAppKey);
+  @override
+  State<StatefulWidget> createState()=>MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  ThemeMode themeMode = ThemeMode.light;
   @override
   Widget build(BuildContext context) {
+    ThemeApp themeApp = ThemeApp();
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
       onGenerateRoute: MyRouters.generateRoute,
       initialRoute: ROUTE_PLAY_LIST,
+      themeMode: themeMode,
+      darkTheme: ThemeData(
+        textTheme: themeApp.textThemeDark,
+        scaffoldBackgroundColor: backgroundDark,
+        primaryIconTheme: themeApp.iconThemeDark,
+        iconTheme: themeApp.iconThemeData2, // Ella puso "accentIconTheme", pero a mí me marca error.
+      ),
       theme: ThemeData(
+        textTheme: themeApp.textTheme,
+        scaffoldBackgroundColor: background,
+        primaryIconTheme: themeApp.iconThemeData1,
+        iconTheme: themeApp.iconThemeData2, // Ella puso "accentIconTheme", pero a mí me marca error.
+      ),
+      /*theme: ThemeData(
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -36,10 +58,16 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue), // deepPurple
         useMaterial3: true,
-      ),
+      ),*/
       //home: const MyHomePage(title: 'Flutter Demo Home Page'), // Original
       //home: LoginPage(),
     );
+  }
+
+  changeTheme(ThemeMode themeMode){
+    setState(() {
+      this.themeMode=themeMode;
+    });
   }
 }
 
