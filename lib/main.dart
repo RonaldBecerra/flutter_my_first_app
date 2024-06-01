@@ -3,6 +3,7 @@ import 'package:my_first_app/Common/MyKeys.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Values/ColorsApp.dart';
 import 'package:my_first_app/Values/ThemeApp.dart';
+import 'package:sizer/sizer.dart';
 import 'Pages/LoginPage.dart';
 import 'Pages/MyHomePage.dart';
 
@@ -21,46 +22,47 @@ class MyAppState extends State<MyApp> {
   ThemeMode themeMode = ThemeMode.light;
   @override
   Widget build(BuildContext context) {
-    ThemeApp themeApp = ThemeApp();
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
-      onGenerateRoute: MyRouters.generateRoute,
-      initialRoute: ROUTE_PLAY_LIST,
-      themeMode: themeMode,
-      darkTheme: ThemeData(
-        textTheme: themeApp.textThemeDark,
-        scaffoldBackgroundColor: backgroundDark,
-        primaryIconTheme: themeApp.iconThemeDark,
-        iconTheme: themeApp.iconThemeData2, // Ella puso "accentIconTheme", pero a mí me marca error.
-      ),
-      theme: ThemeData(
-        textTheme: themeApp.textTheme,
-        scaffoldBackgroundColor: background,
-        primaryIconTheme: themeApp.iconThemeData1,
-        iconTheme: themeApp.iconThemeData2, // Ella puso "accentIconTheme", pero a mí me marca error.
-      ),
-      /*theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue), // deepPurple
-        useMaterial3: true,
-      ),*/
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'), // Original
-      //home: LoginPage(),
+    return Sizer(
+      builder: (context, orientation, deviceType)=> MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
+        onGenerateRoute: MyRouters.generateRoute,
+        initialRoute: ROUTE_PLAY_LIST,
+        themeMode: themeMode,
+        darkTheme: ThemeData(
+          textTheme: textThemeDark,
+          scaffoldBackgroundColor: backgroundDark,
+          primaryIconTheme: iconThemeDark,
+          iconTheme: iconThemeData2, // Ella puso "accentIconTheme", pero a mí me marca error.
+        ),
+        theme: ThemeData(
+          textTheme: textTheme,
+          scaffoldBackgroundColor: background,
+          primaryIconTheme: iconThemeData1,
+          iconTheme: iconThemeData2, // Ella puso "accentIconTheme", pero a mí me marca error.
+        ),
+        /*theme: ThemeData(
+          // This is the theme of your application.
+          //
+          // TRY THIS: Try running your application with "flutter run". You'll see
+          // the application has a purple toolbar. Then, without quitting the app,
+          // try changing the seedColor in the colorScheme below to Colors.green
+          // and then invoke "hot reload" (save your changes or press the "hot
+          // reload" button in a Flutter-supported IDE, or press "r" if you used
+          // the command line to start the app).
+          //
+          // Notice that the counter didn't reset back to zero; the application
+          // state is not lost during the reload. To reset the state, use hot
+          // restart instead.
+          //
+          // This works for code too, not just values: Most code changes can be
+          // tested with just a hot reload.
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue), // deepPurple
+          useMaterial3: true,
+        ),*/
+        //home: const MyHomePage(title: 'Flutter Demo Home Page'), // Original
+        //home: LoginPage(),
+      )
     );
   }
 

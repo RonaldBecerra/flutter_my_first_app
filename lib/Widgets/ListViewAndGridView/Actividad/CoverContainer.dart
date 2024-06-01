@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Values/DimensApp.dart';
 
 class CoverContainer extends StatelessWidget {
   String image;
@@ -8,7 +9,7 @@ class CoverContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      width: 170,
+      width: coverWidth, //170,
       margin: EdgeInsets.symmetric(vertical: 30, horizontal: 10),
       decoration: BoxDecoration(
         image: DecorationImage(
