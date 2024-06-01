@@ -9,6 +9,7 @@ import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyContainer.dart'
 import 'package:my_first_app/Widgets/ListViewAndGridView/Items/MyListTile.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/MyGridView.dart';
 import 'package:my_first_app/Widgets/ListViewAndGridView/MyListView.dart';
+import 'package:my_first_app/generated/l10n.dart';
 
 class PlayListPage extends StatefulWidget{
   @override
@@ -20,6 +21,10 @@ class PlayListPageState extends State<PlayListPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        //title: Text(S.of(context).welcome),
+        title: Text(S.of(context).money("\$20")),
+      ),
       //backgroundColor: testOpa,
       floatingActionButton: FloatingActionButton(
         onPressed: (){

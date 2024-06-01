@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:my_first_app/Common/MyKeys.dart';
 import 'package:my_first_app/Common/MyRouters.dart';
 import 'package:my_first_app/Values/ColorsApp.dart';
 import 'package:my_first_app/Values/ThemeApp.dart';
+import 'package:my_first_app/generated/l10n.dart';
 import 'package:sizer/sizer.dart';
 import 'Pages/LoginPage.dart';
 import 'Pages/MyHomePage.dart';
@@ -24,6 +26,13 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Sizer(
       builder: (context, orientation, deviceType)=> MaterialApp(
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          S.delegate,
+        ],
+        supportedLocales: S.delegate.supportedLocales,
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false, // Quita la cinta que indica Debug
         onGenerateRoute: MyRouters.generateRoute,
